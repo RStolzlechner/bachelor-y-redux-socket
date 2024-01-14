@@ -1,0 +1,162 @@
+<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="571px" height="271px" viewBox="-0.5 -0.5 571 271" content="&lt;mxfile&gt;&lt;diagram id=&quot;FQaz0ZQ4wvKYEnI3G3QI&quot; name=&quot;Page-1&quot;&gt;7Zlbb9MwFMc/Cw+RxgNVLkvbPa7pgIehIYrEs5ucJqZOHBynFz49x7HdNL1AYVWLtEmVFv99bB+f37FjL04Q5asPgpTZJ54Ac3w3WTnB2PF9zx0O8I9S1loJ/aEWUkETY9QKE/oTbEuj1jSBqmMoOWeSll0x5kUBsexoRAi+7JrNOOuOWpIU9oRJTNi++o0mMtPqMHRb/SPQNLMje66pyYk1NkKVkYQvt6TgwQkiwbnUT/kqAqaCZ+Oi270/UrtxTEAhT2ng6wYLwmozt6+CpimI+1hSXkxALGgMxle5tgGoljRnpMDSaMYLOTE1AZYJo2mBzzF6AAKFBQhJMXb3pkLyEtU4oyx5JGteKz8rSeK5LY0yLuhP7JYwrPJQwGohTRr4/Y7FRLVE2UVVQIU2n+3kvR3pE1l1DB9JJY0Qc8ZIWdFpMw3VMCcipcWIS8lzY2RChdOB1dFwexuImP3Ac5BijSamgc0Qm/cDU162WeQHRsu2M6h/a7LXZG666bqFiw+G72HWwR5rR2kuaVA7wT0+d+jvYceJywaH4HOIOOPId1xwnQeUsR3JpgKDmTyaCFVJYlqkj43N+LZVvpjpK4lj2xlrFkpGkwQKBZFLIokmpvCUnBayCU84wh9GMXJ7oROi4xGWvbaMP2UuZMQLnAuhDTzAdFiCSolOTvsnYfcPYzecMWdPwmztnkP59gDlHYyMNng0RruBef/EMEcaDFpoXxXT8TtvD2ywDzY4AJGRKbDPvKI6JcdC2+7A/RO/boLSIgNB5akr+PcoQ/80lMPnkwwPkBwpZwWPoapu3uolO8U33+tKbbp+Pt7+iRvyOVZq/whfFGhCJFjAatKvfM+zEw8vuBMPjvDF9+2N3H7PGs58+l0dVl9Rnwe15524VZ+D9fAg68h37t2EViUeUrObqo7Vvt1hvuDYwyvx82zeXjC8HPG7PeLtexkvXQNc6X2mZjkV+JTq44dWMPJFh3j/R60ufKNlRiW8U2BAp0cpQLczBls94dn9bqtPdFd3qw0WRDQjEFlXyh01SufFcl336Oxm49sb7Zzvuv9D4C44FOPpgxBcmFBcHcoFhxIga6EGmTRTj3gC/00UBuPj41/FI73HXXxhXGSXOpYfzb6/Zpwkm92rOTZltOoR+wJ9Mctla9o9c4ro7YbHll9OVDYHq+3wpILXpTqK+O6BqL2kpNnssU/z7tHTps71g/G7rfYC48dEYvbASz12wPUT4LonjlAdOa8dgoNrYDDe/+SSkRKaS58E68FEOzBeCqLueJnM7ReTKYnnaisskqda6v/3NnpCxPxJXfykujO5PTd0TrxAnuHrR+D9+fPHxqZzX7OGf3Fhw2L7Ga2p2/oYGTz8Ag==&lt;/diagram&gt;&lt;/mxfile&gt;">
+    <defs>
+        <clipPath id="mx-clip-4-31-222-26-0">
+            <rect x="4" y="31" width="222" height="26"/>
+        </clipPath>
+        <clipPath id="mx-clip-4-65-222-26-0">
+            <rect x="4" y="65" width="222" height="26"/>
+        </clipPath>
+        <clipPath id="mx-clip-4-91-222-26-0">
+            <rect x="4" y="91" width="222" height="26"/>
+        </clipPath>
+        <clipPath id="mx-clip-4-117-222-26-0">
+            <rect x="4" y="117" width="222" height="26"/>
+        </clipPath>
+        <clipPath id="mx-clip-4-143-222-26-0">
+            <rect x="4" y="143" width="222" height="26"/>
+        </clipPath>
+    </defs>
+    <g>
+        <path d="M 0 26 L 0 0 L 230 0 L 230 26" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 0 26 L 0 164 L 230 164 L 230 26" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 0 26 L 230 26" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" font-weight="bold" font-style="italic" pointer-events="none" text-anchor="middle" font-size="12px">
+            <text x="114.5" y="17.5">
+                TriggerActionService
+            </text>
+        </g>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" font-style="italic" pointer-events="none" clip-path="url(#mx-clip-4-31-222-26-0)" font-size="12px">
+            <text x="5.5" y="43.5">
+                # action: TriggerAction
+            </text>
+        </g>
+        <path d="M 0 56 L 230 56" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-4-65-222-26-0)" font-size="12px">
+            <text x="5.5" y="77.5">
+                + process(): bool
+            </text>
+        </g>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" font-style="italic" pointer-events="none" clip-path="url(#mx-clip-4-91-222-26-0)" font-size="12px">
+            <text x="5.5" y="103.5">
+                + validate(): int
+            </text>
+        </g>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" font-style="italic" pointer-events="none" clip-path="url(#mx-clip-4-117-222-26-0)" font-size="12px">
+            <text x="5.5" y="129.5">
+                + act(triggerAction): object
+            </text>
+        </g>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-4-143-222-26-0)" font-size="12px">
+            <text x="5.5" y="155.5">
+                + disptach(successAction): void
+            </text>
+        </g>
+        <path d="M 260 0 L 540 0 L 570 30 L 570 270 L 260 270 L 260 0 Z" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 540 0 L 540 30 L 570 30 Z" fill-opacity="0.05" fill="#000000" stroke="none" pointer-events="none"/>
+        <path d="M 540 0 L 540 30 L 570 30" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 308px; height: 1px; padding-top: 7px; margin-left: 262px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: left;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: none; white-space: normal; overflow-wrap: normal;">
+                                process() {
+                                <br/>
+                                <span style="white-space: pre;">
+                                </span>
+                                var status = validate();
+                                <br/>
+                                <span style="white-space: pre;">
+                                </span>
+                                if(status != 200) {
+                                <br/>
+                                <span style="white-space: pre;">
+                                </span>
+                                <span style="white-space: pre;">
+                                </span>
+                                logError(status);
+                                <br/>
+                                <span style="white-space: pre;">
+                                </span>
+                                <span style="white-space: pre;">
+                                </span>
+                                return StatusCode(status);
+                                <br/>
+                                <span style="white-space: pre;">
+                                </span>
+                                }
+                                <br/>
+                                <br/>
+                                <span style="white-space: pre;">
+                                </span>
+                                try {
+                                <br/>
+                                <span style="white-space: pre;">
+                                    <span style="white-space: pre;">
+                                    </span>
+                                    va
+                                </span>
+                                r payload = act(this.action);
+                                <br/>
+                                <span style="white-space: pre;">
+                                </span>
+                                <span style="white-space: pre;">
+                                </span>
+                                this.action.success.payload = payload;
+                                <br/>
+                                <span style="white-space: pre;">
+                                </span>
+                                <span style="white-space: pre;">
+                                </span>
+                                disptach(this.action.group, this.action.success);
+                                <br/>
+                                <span style="white-space: pre;">
+                                </span>
+                                <span style="white-space: pre;">
+                                </span>
+                                return Ok(successAction.payload);
+                                <br/>
+                                <span style="white-space: pre;">
+                                </span>
+                                }
+                                <br/>
+                                <span style="white-space: pre;">
+                                </span>
+                                catch(e) {
+                                <br/>
+                                <span style="white-space: pre;">
+                                </span>
+                                <span style="white-space: pre;">
+                                </span>
+                                logError(e);
+                                <br/>
+                                <span style="white-space: pre;">
+                                </span>
+                                <span style="white-space: pre;">
+                                </span>
+                                return StatusCode(500);
+                                <br/>
+                                <span style="white-space: pre;">
+                                </span>
+                                }
+                                <br/>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="262" y="19" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px">
+                    process() {...
+                </text>
+            </switch>
+        </g>
+    </g>
+    <switch>
+        <g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/>
+        <a transform="translate(0,-5)" xlink:href="https://www.diagrams.net/doc/faq/svg-export-text-problems" target="_blank">
+            <text text-anchor="middle" font-size="10px" x="50%" y="100%">
+                Text is not SVG - cannot display
+            </text>
+        </a>
+    </switch>
+</svg>

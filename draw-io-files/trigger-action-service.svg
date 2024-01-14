@@ -1,0 +1,55 @@
+<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="231px" height="168px" viewBox="-0.5 -0.5 231 168" content="&lt;mxfile&gt;&lt;diagram id=&quot;FQaz0ZQ4wvKYEnI3G3QI&quot; name=&quot;Page-1&quot;&gt;7ZfbjpswEIafBim9aMVhyXKbkG17kZVWzUq9dsCB6RoPMs5pn75jMEvIYYu6aa8iRQr+PWM8/n4bcIK42H1TrMwfMeXC8d105wQzx/c9N7qnP6PsGyX0o0bIFKQ2qBMW8MrbTKuuIeVVL1AjCg1lX0xQSp7onsaUwm0/bIWif9eSZfxEWCRMnKo/IdV5o0ah2+nfOWR5e2fPtT0Fa4OtUOUsxe2BFDw4QawQdXNV7GIuzOK169Lkfb3Q+zYxxaUekuA3CRsm1ra2ZwVZxtUk0YBywdUGEm7nqvftAlRbKAST1JquUOqF7QmozQRkkq4TmgFXJGy40kBrN7EdGktSkxxEOmd7XJt5VpolL21rmqOCVxqWCerySKBupa0N/HEvYmEySXZJVbyimKe2eO9IemS7XuCcVdoKCQrBygqWdRkmsWAqAzlFrbGwQXapqBy+u7jc3htEcj/Hgmu1pxCbELQObo1/b9vbzkZ+YLX80ELjO2tfa93sbeyOLl1YwOdhByewHaO5rGbtBBO67uE/4U6V65qHwhceo0ACPJPYGAGEOJJaLwi+0hedUJUsAZnN65jZXaf8sOUbCSl3JeqdkkOacmkoomaaNcgMnxJB6np5win9aBVj90vohDTxmNpe16afCVc6Rkm1MKjpcfLDlhtP9EztD+Lun+duOZNpB2Fu4z5C+e4M5SOMAmo8Dcb2BPP+imFBNATvoD0bprPP3gnY4BRscAaiYEsunrCCxpIz1cQewf0Tv75BQeZcgR66hd9HGfrDUEYfJxmeITk1k1WY8KoafWq27JIefbedWg/9cbzjgQfyNXbq+AJfEiBlmreATdE3vtc5iaP/eBLfX+BLz9uRPnzOWs64/GXeVm+or4Pa8wYe1ddgHZ1lHfvOxE2hKuktNR9V68Sc2z3mG6QRbsSvc3h7QfTPiFOz+yyr+w4+boOH3w==&lt;/diagram&gt;&lt;/mxfile&gt;">
+    <defs>
+        <clipPath id="mx-clip-4-31-222-26-0">
+            <rect x="4" y="31" width="222" height="26"/>
+        </clipPath>
+        <clipPath id="mx-clip-4-65-222-26-0">
+            <rect x="4" y="65" width="222" height="26"/>
+        </clipPath>
+        <clipPath id="mx-clip-4-91-222-26-0">
+            <rect x="4" y="91" width="222" height="26"/>
+        </clipPath>
+        <clipPath id="mx-clip-4-117-222-26-0">
+            <rect x="4" y="117" width="222" height="26"/>
+        </clipPath>
+        <clipPath id="mx-clip-4-143-222-26-0">
+            <rect x="4" y="143" width="222" height="26"/>
+        </clipPath>
+    </defs>
+    <g>
+        <path d="M 0 26 L 0 0 L 230 0 L 230 26" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 0 26 L 0 164 L 230 164 L 230 26" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 0 26 L 230 26" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" font-weight="bold" font-style="italic" pointer-events="none" text-anchor="middle" font-size="12px">
+            <text x="114.5" y="17.5">
+                TriggerActionService
+            </text>
+        </g>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" font-style="italic" pointer-events="none" clip-path="url(#mx-clip-4-31-222-26-0)" font-size="12px">
+            <text x="5.5" y="43.5">
+                # action: TriggerAction
+            </text>
+        </g>
+        <path d="M 0 56 L 230 56" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-4-65-222-26-0)" font-size="12px">
+            <text x="5.5" y="77.5">
+                + process(): bool
+            </text>
+        </g>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" font-style="italic" pointer-events="none" clip-path="url(#mx-clip-4-91-222-26-0)" font-size="12px">
+            <text x="5.5" y="103.5">
+                + validate(): int
+            </text>
+        </g>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" font-style="italic" pointer-events="none" clip-path="url(#mx-clip-4-117-222-26-0)" font-size="12px">
+            <text x="5.5" y="129.5">
+                + act(triggerAction): object
+            </text>
+        </g>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-4-143-222-26-0)" font-size="12px">
+            <text x="5.5" y="155.5">
+                + disptach(successAction): void
+            </text>
+        </g>
+    </g>
+</svg>
