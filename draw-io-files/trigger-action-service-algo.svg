@@ -1,65 +1,15 @@
-<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="571px" height="271px" viewBox="-0.5 -0.5 571 271" content="&lt;mxfile&gt;&lt;diagram id=&quot;FQaz0ZQ4wvKYEnI3G3QI&quot; name=&quot;Page-1&quot;&gt;7Zlbb9MwFMc/Cw+RxgNVLkvbPa7pgIehIYrEs5ucJqZOHBynFz49x7HdNL1AYVWLtEmVFv99bB+f37FjL04Q5asPgpTZJ54Ac3w3WTnB2PF9zx0O8I9S1loJ/aEWUkETY9QKE/oTbEuj1jSBqmMoOWeSll0x5kUBsexoRAi+7JrNOOuOWpIU9oRJTNi++o0mMtPqMHRb/SPQNLMje66pyYk1NkKVkYQvt6TgwQkiwbnUT/kqAqaCZ+Oi270/UrtxTEAhT2ng6wYLwmozt6+CpimI+1hSXkxALGgMxle5tgGoljRnpMDSaMYLOTE1AZYJo2mBzzF6AAKFBQhJMXb3pkLyEtU4oyx5JGteKz8rSeK5LY0yLuhP7JYwrPJQwGohTRr4/Y7FRLVE2UVVQIU2n+3kvR3pE1l1DB9JJY0Qc8ZIWdFpMw3VMCcipcWIS8lzY2RChdOB1dFwexuImP3Ac5BijSamgc0Qm/cDU162WeQHRsu2M6h/a7LXZG666bqFiw+G72HWwR5rR2kuaVA7wT0+d+jvYceJywaH4HOIOOPId1xwnQeUsR3JpgKDmTyaCFVJYlqkj43N+LZVvpjpK4lj2xlrFkpGkwQKBZFLIokmpvCUnBayCU84wh9GMXJ7oROi4xGWvbaMP2UuZMQLnAuhDTzAdFiCSolOTvsnYfcPYzecMWdPwmztnkP59gDlHYyMNng0RruBef/EMEcaDFpoXxXT8TtvD2ywDzY4AJGRKbDPvKI6JcdC2+7A/RO/boLSIgNB5akr+PcoQ/80lMPnkwwPkBwpZwWPoapu3uolO8U33+tKbbp+Pt7+iRvyOVZq/whfFGhCJFjAatKvfM+zEw8vuBMPjvDF9+2N3H7PGs58+l0dVl9Rnwe15524VZ+D9fAg68h37t2EViUeUrObqo7Vvt1hvuDYwyvx82zeXjC8HPG7PeLtexkvXQNc6X2mZjkV+JTq44dWMPJFh3j/R60ufKNlRiW8U2BAp0cpQLczBls94dn9bqtPdFd3qw0WRDQjEFlXyh01SufFcl336Oxm49sb7Zzvuv9D4C44FOPpgxBcmFBcHcoFhxIga6EGmTRTj3gC/00UBuPj41/FI73HXXxhXGSXOpYfzb6/Zpwkm92rOTZltOoR+wJ9Mctla9o9c4ro7YbHll9OVDYHq+3wpILXpTqK+O6BqL2kpNnssU/z7tHTps71g/G7rfYC48dEYvbASz12wPUT4LonjlAdOa8dgoNrYDDe/+SSkRKaS58E68FEOzBeCqLueJnM7ReTKYnnaisskqda6v/3NnpCxPxJXfykujO5PTd0TrxAnuHrR+D9+fPHxqZzX7OGf3Fhw2L7Ga2p2/oYGTz8Ag==&lt;/diagram&gt;&lt;/mxfile&gt;">
-    <defs>
-        <clipPath id="mx-clip-4-31-222-26-0">
-            <rect x="4" y="31" width="222" height="26"/>
-        </clipPath>
-        <clipPath id="mx-clip-4-65-222-26-0">
-            <rect x="4" y="65" width="222" height="26"/>
-        </clipPath>
-        <clipPath id="mx-clip-4-91-222-26-0">
-            <rect x="4" y="91" width="222" height="26"/>
-        </clipPath>
-        <clipPath id="mx-clip-4-117-222-26-0">
-            <rect x="4" y="117" width="222" height="26"/>
-        </clipPath>
-        <clipPath id="mx-clip-4-143-222-26-0">
-            <rect x="4" y="143" width="222" height="26"/>
-        </clipPath>
-    </defs>
+<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="311px" height="271px" viewBox="-0.5 -0.5 311 271" content="&lt;mxfile&gt;&lt;diagram id=&quot;FQaz0ZQ4wvKYEnI3G3QI&quot; name=&quot;Page-1&quot;&gt;5VdNj9owEP0tPUSih6LgiIU98rXbS8WBQ89uPCQWJs46kwX66zuOna+lVD2RlThhP49nnofxxC+IVsfzq+F5+kMLUAELxTmI1gFjk3A+ox+LXBwyZXMHJEYKb9QCO/kb6p0eLaWAomeIWiuUeR+MdZZBjD2MG6NPfbO9Vv2oOU/gCtjFXF2jP6XA1KHzadji30EmaR15EvqVI6+NPVCkXOhTB4o2QbQyWqMbHc8rUDZ5dV7cvpcbqw0xAxn+z4Znt+Gdq9KfLTc6hqIYfSU4mC0D9qTI0/KXoVFiRzVS5DyzJ8CLT8vTW2lpL0+pRPhGyzHhC0vHgNvnDTqeAhY9d3wSUefWGbxzU0XgWBaWjo1iuUrBEYhhNCw9uR813L44ciwMP0Pi7hhK6WRDV8r4VAz+p9wxlAEsjQ2yq46+oj73abIwW9+OPwgjNJchLsZdutSt+qha8UVpLpruxWMcYSqLMQ2kzoYvlDtWQHvscVHG9isz/pieev44WRGyyJHHabcqxonRZR6wlX3YXGftkYqm6bHbw8gff+GS4Utl+GT8q9XeIX7MkaoHHvXZAcMXwLAvjql9cg6dgr/eAQuyXmRGeie3w0wj1Ax2jsD6RGKRsBSPimYT64vHB9sKM7EtUckMPC64OWxpl0QrIMNxOCWQZEGS0VTBvvoqg0FJkm3hYdR5xfujPvKSyZrDuQN5vfQK+gju7eJXo1qF1uJ15uenVgo2NmlHBrLakHv5mTS+W4VGAy/S6mkrBqu1jqSONn8A&lt;/diagram&gt;&lt;/mxfile&gt;">
+    <defs/>
     <g>
-        <path d="M 0 26 L 0 0 L 230 0 L 230 26" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
-        <path d="M 0 26 L 0 164 L 230 164 L 230 26" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
-        <path d="M 0 26 L 230 26" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
-        <g fill="rgb(0, 0, 0)" font-family="Helvetica" font-weight="bold" font-style="italic" pointer-events="none" text-anchor="middle" font-size="12px">
-            <text x="114.5" y="17.5">
-                TriggerActionService
-            </text>
-        </g>
-        <g fill="rgb(0, 0, 0)" font-family="Helvetica" font-style="italic" pointer-events="none" clip-path="url(#mx-clip-4-31-222-26-0)" font-size="12px">
-            <text x="5.5" y="43.5">
-                # action: TriggerAction
-            </text>
-        </g>
-        <path d="M 0 56 L 230 56" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
-        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-4-65-222-26-0)" font-size="12px">
-            <text x="5.5" y="77.5">
-                + process(): bool
-            </text>
-        </g>
-        <g fill="rgb(0, 0, 0)" font-family="Helvetica" font-style="italic" pointer-events="none" clip-path="url(#mx-clip-4-91-222-26-0)" font-size="12px">
-            <text x="5.5" y="103.5">
-                + validate(): int
-            </text>
-        </g>
-        <g fill="rgb(0, 0, 0)" font-family="Helvetica" font-style="italic" pointer-events="none" clip-path="url(#mx-clip-4-117-222-26-0)" font-size="12px">
-            <text x="5.5" y="129.5">
-                + act(triggerAction): object
-            </text>
-        </g>
-        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-4-143-222-26-0)" font-size="12px">
-            <text x="5.5" y="155.5">
-                + disptach(successAction): void
-            </text>
-        </g>
-        <path d="M 260 0 L 540 0 L 570 30 L 570 270 L 260 270 L 260 0 Z" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
-        <path d="M 540 0 L 540 30 L 570 30 Z" fill-opacity="0.05" fill="#000000" stroke="none" pointer-events="none"/>
-        <path d="M 540 0 L 540 30 L 570 30" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 0 0 L 280 0 L 310 30 L 310 270 L 0 270 L 0 0 Z" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 280 0 L 280 30 L 310 30 Z" fill-opacity="0.05" fill="#000000" stroke="none" pointer-events="all"/>
+        <path d="M 280 0 L 280 30 L 310 30" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
         <g transform="translate(-0.5 -0.5)">
             <switch>
                 <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
-                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 308px; height: 1px; padding-top: 7px; margin-left: 262px;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 308px; height: 1px; padding-top: 7px; margin-left: 2px;">
                         <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: left;">
-                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: none; white-space: normal; overflow-wrap: normal;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
                                 process() {
                                 <br/>
                                 <span style="white-space: pre;">
@@ -145,7 +95,7 @@
                         </div>
                     </div>
                 </foreignObject>
-                <text x="262" y="19" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px">
+                <text x="2" y="19" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px">
                     process() {...
                 </text>
             </switch>
