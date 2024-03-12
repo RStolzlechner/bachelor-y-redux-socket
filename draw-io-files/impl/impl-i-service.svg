@@ -1,0 +1,54 @@
+<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="281px" height="160px" viewBox="-0.5 -0.5 281 160" content="&lt;mxfile&gt;&lt;diagram id=&quot;PBzxYrKsThmTSeVXnXwx&quot; name=&quot;Page-1&quot;&gt;7ZfbbtpAEIafxlJ7U/mACbdgkhQpkarSqtcbe7BXWe9Y6yFAnr6z9hoDwRJKolwhWbLn35k9zPcbGS9Kyu29EVXxiBkoL/SzrRfNvTAMAj/gm1V2rXIznrRCbmTmknphKV/Bib5T1zKD+iiREBXJ6lhMUWtI6UgTxuDmOG2F6njVSuTwRlimQr1V/8mMiladxH6v/wSZF7Q/sBspRZfshLoQGW4OpOjWixKDSO1TuU1A2eZ1fWnr7gZG9xszoOmSgrAteBFq7c62mEOJC4JyCeZFpuD2Sbvu8PVGlkpojmYr1LR0Iz7HaSFV9iB2uLaL1yTS5y6aFWjkK+cLxUMBCzxsyLENx3Y2qVSCCg0LGpsF+qKlncwtY6Dmsl/dIYMT6VFsjxIfRE3dBlEpUdXyqdmyLSyFyaWeIRGWLsm1BAzBdrCtwR4WuxywBDI7TukKOr7O4OHIxZveLuHEacWhVeKxs6mzaL6fu6fIDw7keajRG6heyKfy74GmSk3rnU6/ffeiKUt/RP3shWNlCS1u9boEI2xznNR5geOcmtZ09xNTcKuoYWrwGU4gnuEqlMw1hwpWtsz2WvLrNXUyYWUnq0Qqdf7Q5MxHvfLb9ctKyLUr1bxChcwy0BY7kiDxtLdlhVJT0894xhe3PfF/xF7MG084DvqYL5tuKEHNZxGywQ1soA3UdKk3wvPe6LwwvswK4Sc4YTTshNlukbVWUKjzpuaMJ/YGiO6u7D/OPg6/jn08wD4xIAha9P377Uu+nTFAa44r+Y+Sv5l8HfnxAPm/VTZM/sr23WwDf/R1cG8G4M5BQQf34Bf9ivX9WKMLP9regZXD/iO/GTv4qxTd/gc=&lt;/diagram&gt;&lt;/mxfile&gt;">
+    <defs>
+        <clipPath id="mx-clip-4-31-272-26-0">
+            <rect x="4" y="31" width="272" height="26"/>
+        </clipPath>
+        <clipPath id="mx-clip-4-57-272-26-0">
+            <rect x="4" y="57" width="272" height="26"/>
+        </clipPath>
+        <clipPath id="mx-clip-4-83-272-26-0">
+            <rect x="4" y="83" width="272" height="26"/>
+        </clipPath>
+        <clipPath id="mx-clip-4-109-272-26-0">
+            <rect x="4" y="109" width="272" height="26"/>
+        </clipPath>
+        <clipPath id="mx-clip-4-135-272-26-0">
+            <rect x="4" y="135" width="272" height="26"/>
+        </clipPath>
+    </defs>
+    <g>
+        <path d="M 0 26 L 0 0 L 280 0 L 280 26" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 0 26 L 0 156 L 280 156 L 280 26" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 0 26 L 280 26" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" text-anchor="middle" font-size="12px">
+            <text x="139.5" y="17.5">
+                IDemoItemService
+            </text>
+        </g>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-4-31-272-26-0)" font-size="12px">
+            <text x="5.5" y="43.5">
+                + GetAllAsync(): Task&lt;IEnumerable&lt;DemoItem&gt;&gt;
+            </text>
+        </g>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-4-57-272-26-0)" font-size="12px">
+            <text x="5.5" y="69.5">
+                + GetByIdAsync(long id): Task&lt;DemoItem?&gt;
+            </text>
+        </g>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-4-83-272-26-0)" font-size="12px">
+            <text x="5.5" y="95.5">
+                + CreateAsync(DemoItem item): Task&lt;long&gt;
+            </text>
+        </g>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-4-109-272-26-0)" font-size="12px">
+            <text x="5.5" y="121.5">
+                + UpdateAsync(DemoItem item)
+            </text>
+        </g>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-4-135-272-26-0)" font-size="12px">
+            <text x="5.5" y="147.5">
+                + DeleteAsync(long id)
+            </text>
+        </g>
+    </g>
+</svg>
