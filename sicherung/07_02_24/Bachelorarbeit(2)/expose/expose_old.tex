@@ -1,0 +1,234 @@
+%!TEX encoding = UTF-8 Unicode
+\documentclass[12pt]{article} % 12pt-article hier, aber Abschlussarbeit dann 12pt-book
+\usepackage[utf8]{inputenc}   %empfohlene Zeichenkodierung UTF-8
+\usepackage[T1]{fontenc}      %empfohlene Fontkodierung
+\usepackage{lmodern}          %besserer Font
+\usepackage{microtype}        %bessere Zeichenabstände
+\usepackage[german]{babel}    %deutsch
+\usepackage{hyperref} % um auf sections zu verweisen
+\usepackage{csquotes} % Required for fine quoting
+\usepackage{enumitem} % Required for nested arabic Enumeration
+\usepackage[
+backend=biber,
+style=alphabetic
+]{biblatex} %required for citations
+
+\usepackage[a4paper,margin=2.5cm]{geometry} %Seitenmaße
+\parskip.5\baselineskip
+
+
+\addbibresource{bibliography.bib} %Imports bibliography file
+
+
+\begin{document}
+
+%% Titelabschnitt
+\begin{center}
+   \parskip1\baselineskip
+   
+   Exposé zur Abschlussarbeit am LG Kooperative Systeme der FernUniversität in Hagen
+   
+   ~
+   
+   \LARGE\bfseries 
+    Optimierung der Softwareentwicklung von Webanwendungen mit zentralem Datenstore und WebSocket-Kommunikation
+
+   \large
+   Ricardo Stolzlechner
+   
+   9463470
+   
+   ricardo.stolzlechner@gmail.com
+   
+   Informatik Bachelor of Science
+   
+   15. Oktober 2023 bis 15. April 2024
+   
+   Betreuerin: Dr. Lihong Ma
+%}
+\end{center}
+
+%% Text
+\section{Problemstellung}
+
+\subsection{Motivation}
+\label{motivation}
+
+In der Entwicklung von Webanwendungen werden häufig komponentenbasierte JavaScript-Frameworks eingesetzt \cite{saks_javascript_2019}. 
+Mit zunehmender Anzahl der verwendeten Komponenten steigt auch die Komplexität des zugrundeliegenden Codes. Oft ist es erforderlich, dass die Komponenten Daten untereinander austauschen, um auf dem aktuellen Stand zu bleiben. Um die durch den Datenaustausch entstehende Komplexität zu reduzieren, kann ein zentraler Redux basierter Store verwendet werden. Dieser verwaltet den Zustand der Anwendung und kann als einzige Informationsquelle der anzuzeigenden Daten betrachtet werden. Der Store bietet darüber hinaus nicht nur den Vorteil einer verbesserten Leistung, sondern erleichtert auch die Testbarkeit \cite{farhi_adding_2017}.
+\\
+
+Ein weiteres Problem bei der Entwicklung von Webanwendungen besteht darin, dass die standardmäßige HTTP-Kommunikation zwischen einem Webclient und dem Server nur vom Client aus initiiert werden kann. Der Server ist mit HTTP also nicht in der Lage, den Clients Nachrichten zu schicken. Durch den Einsatz des WebSocket-Kommunikationsprotokolls anstatt oder neben HTTP kann eine bidirektionale Kommunikation ermöglicht werden. So ist es möglich, die Daten der einzelnen Clients synchron zu halten \cite{furukawa_web-based_2011}.
+\\
+
+In der Praxis werden oft beide der oben genannten Konzepte gemeinsam eingesetzt. Wenn nun eine WebSocket-Nachricht vom Server gesendet wird, führt dies normalerweise dazu, dass am Client eine entsprechende Aktion ausgelöst wird, die den zentralen Store aktualisiert. Jede neue WebSocket-Nachricht erfordert somit auch die Erstellung einer eigenen Client-Methode, in der auf die Nachricht reagiert und der Store entsprechend angepasst wird. Dadurch ist es nötig, pro WebSocket-Nachricht sowohl server- als auch clientseitige Logik zu implementieren.
+\\
+
+Die Notwendigkeit, für jede neue WebSocket-Nachricht eine eigene clientseitige Funktion zu erstellen, erhöht die Komplexität in der Softwareentwicklung und beeinträchtigt die Effizienz bei der Entwicklung und Wartung. Aus diesen Gründen ergibt sich die Relevanz des beschriebenen Problems.
+
+\subsection{Aufgabenstellung}
+\label{jobdefinition}
+
+"`Yoshie.io"'\footnote{https://www.yoshie.io/} ist eine kollaborative Webanwendung, die sich auf das Baugewerbe spezialisiert hat. Der Autor dieser Arbeit ist dort als technischer Leiter tätig. Im Verlauf der Entwicklung der Anwendung wurden sowohl ein Datenstore als auch das WebSocket-Kommunikationsprotokoll implementiert. Mit Fortschreiten des Projekts erlangte das in Abschnitt \ref{motivation} erläuterte Problem zunehmend an Bedeutung. Daher wurde ein Konzept entwickelt, das es ermöglicht, die serverseitig initiierte WebSocket-Kommunikation auf eine einzelne Nachricht zu begrenzen. Dieses Konzept hat den Entwicklungsaufwand, sowohl in Bezug auf die WebSocket-Kommunikation als auch auf die Aktualisierung des Datenstores, erheblich vereinfacht. \\
+
+Das Ziel dieser Arbeit besteht darin, das beschriebene Konzept detailliert zu erläutern und mit dem herkömmlichen Modell zu vergleichen. Darüber hinaus sollen andere Ansätze untersucht werden. Diese Ansätze werden ebenfalls mit dem entwickelten Konzept verglichen. Auf Grundlage dieser Vergleiche sollen mögliche Verbesserungsmöglichkeiten des ursprünglichen Konzepts erarbeitet und umgesetzt werden.
+
+\subsection{Intendierte Ergebnisse}
+\label{results}
+
+Die angestrebten Ergebnisse lassen sich in drei Hauptphasen gliedern:
+\\
+
+\textbf{Generische Konzeption und Spezifikation} 
+
+In dieser Phase wird das Konzept, auf das in Abschnitt \ref{jobdefinition} verwiesen wurde, in einer generischen Weise spezifiziert. Dabei liegt der Fokus darauf, eine Lösung zu entwickeln, die unabhängig von den eingesetzten Frameworks anwendbar ist. Dies beinhaltet die Entwicklung eines generischen Algorithmus, der die serverseitig initiierte WebSocket-Kommunikation auf eine einzelne Nachricht begrenzt, und vom Client in genau einer Methode abgearbeitet wird, welche bei neu hinzugefügten WebSocket-Nachrichten unangetastet bleiben kann. Die Spezifikation wird in einer klaren und präzisen Formulierung ausgearbeitet, um die Umsetzung für Entwickler zu erleichtern. \\
+
+\textbf{Recherche und Vergleich von Alternativen}
+
+In der zweiten Phase wird eine eine umfassende Recherche durchgeführt, um alternative Ansätze zur Lösung des in Abschnitt \ref{motivation} beschriebenen Problems zu identifizieren. Diese Alternativen werden eingehend analysiert und mit dem entwickelten Konzept verglichen. Der Fokus liegt dabei auf der Effizienz, der Skalierbarkeit und der Praktikabilität der verschiedenen Ansätze. Die Ergebnisse dieser Analyse dienen als Grundlage für mögliche Verbesserungen des ursprünglichen Konzepts. \\
+
+\textbf{Implementierung und Tests}
+
+Abschließend wird die entwickelte Spezifikation und der generische Algorithmus in verschiedenen Client- und Server-Frameworks implementiert. Dabei werden umfassende Tests durchgeführt, um die Funktionalität und Leistungsfähigkeit der Lösung zu überprüfen. Diese Tests werden sorgfältig dokumentiert und dienen dazu, die praktische Anwendbarkeit des Konzepts in realen Szenarien zu validieren. Eventuelle Implementierungsherausforderungen und Lösungsansätze werden ebenfalls dokumentiert.
+\\
+
+Die angestrebten Ergebnisse zielen darauf ab, ein effektives und leicht anwendbares Konzept zur Optimierung der Softwareentwicklung von Webanwendungen mit zentralem Datenstore und WebSocket-Kommunikation zu schaffen. Dies soll die Entwicklungseffizienz steigern, die Wartbarkeit verbessern und die Notwendigkeit für komplexe clientseitige Funktionen reduzieren. Durch die Vergleiche mit alternativen Ansätzen und die Implementierungstests wird angestrebt, ein umfassendes Verständnis für die Leistungsfähigkeit und die Anwendbarkeit der Lösung zu gewinnen.
+
+\section{Aktueller Stand der Technik}
+\label{other-work}
+
+In einer Arbeit von Qu et al. \cite{qu_websocket-based_2019} wird ein Entwicklungsframework vorgestellt, das die WebSocket-Technologie mit einem Redux-basierten Datenstore verknüpft. Diese Arbeit konzentriert sich jedoch ausschließlich auf die Verwendung der JavaScript-Frameworks React auf der Clientseite und Node.js auf der Serverseite. Im Gegensatz dazu ist das Ziel dieser Arbeit die Entwicklung einer generischen Spezifikation, die unabhängig von den eingesetzten Frameworks implementiert werden kann.
+
+Weitere verwandte Arbeiten, wie die von McFarlane \cite{mcfarlane_managing_2019} oder Tuomi \cite{tuomi_automated_2018}, behandeln oder erwähnen ebenfalls das Thema, beschränken sich jedoch ebenfalls auf die Verwendung der Frameworks React oder Node.js.
+
+Die oben genannten Arbeiten werden voraussichtlich in die im Abschnitt \ref{results} beschriebenen Vergleiche einbezogen, um einen umfassenden Überblick über die Leistungsfähigkeit und Anwendbarkeit der entwickelten Lösung zu erhalten.
+
+\section{Lösungsidee}
+
+In einem Datenstore, der auf Redux basiert, können Komponenten mithilfe von Selektoren die für sie relevanten Daten abrufen. Wenn es zu gewünschten Datenänderungen kommt, beispielsweise aufgrund einer Nutzerinteraktion, bleiben die abgerufenen Daten unverändert. Stattdessen wird eine sogenannte Action an den Datenstore gesendet. Eine Action ist im Wesentlichen eine Datenstruktur, die aus einer Parametersignatur und einer Identifikationszeichenfolge besteht. Das Senden der Action kann entweder bewirken, dass der Reducer aktiviert wird oder dass ein Seiteneffekt ausgelöst wird. Der Reducer führt eine Funktion aus, die den Datenstore aktualisiert. Mithilfe von Seiteneffekten kann bei Erhalt einer Action eine weitere Aktion ausgelöst werden, wie beispielsweise der Aufruf einer Websocket-Methode.
+\cite[117ff.]{thakkar_building_2020}
+
+Wenn nun beispielsweise eine Datenänderung veranlasst wird, die auch anderen Clients angezeigt werden soll, kann wie folgt vorgegangen werden: Der Client, der die Datenänderung auslöst, sendet eine Action an den Datenstore. Im Store ist ein Seiteneffekt definiert, der dazu führt, dass eine HTTP- oder WebSocket-Nachricht an den Server gesendet wird. Der Server verarbeitet den eingehenden Request, indem er beispielsweise Validierungen oder Datenbankänderungen durchführt. Danach sendet der Server eine WebSocket-Nachricht an alle Clients, die sich zuvor für Benachrichtigungen angemeldet haben. Die Clients empfangen die WebSocket-Nachricht und verarbeiten sie, indem sie eine weitere Action an den Store senden. Diese Action aktiviert den Reducer, der den Datenstore anpasst. Bei der Implementierung neuer Funktionen, die eine Server-Client-WebSocket-Kommunikation erfordern, muss der Entwickler die folgenden Schritte durchführen:
+\begin{enumerate}
+    \item Definition einer Action, die den Seiteneffekt auslöst.
+    \item Definition einer Action, die für eine Anpassung durch den Reducer sorgt.
+    \item Implementierung eines neuen WebSocket-Endpunkts auf der Serverseite.
+    \item Implementierung des Seiteneffekts, der den WebSocket-Endpunkt aufruft.
+    \item Implementierung der serverseitigen Validierungs- und Anpassungslogik.
+    \item Implementierung eines neuen WebSocket-Endpunkts auf der Clientseite. Dieser sendet die Reducer-Action an den Store.
+    \item Aufruf des Client-Endpunkts auf der Serverseite.
+    \item Implementierung der Reducer-Funktion, die die eigentlichen Client-Daten anpasst.
+\end{enumerate}
+
+Die Idee zur Vereinfachung dieses Vorgangs besteht darin, die Actions sowohl auf der Server- als auch auf der Clientseite zu definieren. Anstatt die Action nun an den Store zu senden, wird sie direkt an den Server übermittelt. Der Server benötigt lediglich einen einzigen WebSocket- oder HTTP-Endpunkt zum Empfangen der Action. Dieser Endpunkt führt dazu, dass eine Methode ausgeführt wird, in der je nach Identifikationszeichenfolge der Action entschieden wird, welche Validierungen oder Datenbankänderungen durchgeführt werden sollen. Nach Abschluss sendet der Server wieder eine Action per WebSocket an den Client. Dies geschieht ebenfalls über eine zuvor bereits definierte Client-Methode. In dieser Methode muss der Client lediglich sicherstellen, dass die Action an den Store weitergeleitet wird. Über die weitergeleitete Action wird dann der Reducer aktiviert, der den Store anpasst. Wenn neue Endpunkte benötigt werden, kann auf Seiteneffekte, die die Server-Client-Kommunikation behandeln, vollständig verzichtet werden. Mit dieser Idee muss eine Entwicklerin die folgenden Schritte durchführen, um die Server-Client-Kommunikation zu erweitern:
+\begin{enumerate}
+    \item Definition von zwei Actions auf der Client- und der Serverseite.
+    \item Senden einer Action an den Server durch Aufruf des vorhandenen Endpunkts.
+    \item Implementierung der serverseitigen Validierungs- und Anpassungslogik.
+    \item Aufruf des vorhandenen Client-Endpunkts auf der Serverseite, wobei die zweite Action übergeben wird.
+    \item Implementierung der Reducer-Funktion, die die eigentlichen Client-Daten anpasst.
+\end{enumerate}
+
+Ein Vergleich der beiden oben beschriebenen Ansätze zeigt, dass der zweite Ansatz erheblich weniger Implementierungsaufwand erfordert.
+\\
+
+Die in Abschnitt \ref{results} definierten Ergebnisse sollen nun wie folgt erreicht werden:
+\begin{enumerate}
+    \item Zunächst werden die Konzepte eines zentralen Redux-basierten Datenstores und des WebSocket-Protokolls in einführenden Kapiteln beschrieben.
+    \item Anschließend werden die beiden oben erwähnten Konzepte genauer erläutert und spezifiziert. Dabei werden zusätzlich UML-Diagramme und Pseudocode-Algorithmen erstellt, um die Vorgehensweisen näher zu erläutern und zu spezifizieren.
+    \item Die beiden beschriebenen Ansätze werden anhand ihrer Erweiterbarkeit und Testbarkeit verglichen.
+    \item Dann folgt Phase zwei: In einer Literaturrecherche werden zusätzlich zu den in Abschnitt \ref{other-work} erwähnten Arbeiten weitere gesucht, die sich mit dem beschriebenen Problem befassen. Falls keine weiteren Arbeiten gefunden werden, wird stattdessen eine Recherche in der Open-Source-Community durchgeführt.
+    \item Die in der Recherche gefundenen Arbeiten werden ebenfalls hinsichtlich ihrer Erweiterbarkeit und Testbarkeit mit der Lösungsidee verglichen.
+    \item Anschließend werden Verbesserungen aus diesen Vergleichen herausgearbeitet und in das ursprüngliche Konzept integriert.
+    \item Abschließend wird das entwickelte Konzept in verschiedenen Frameworks umgesetzt. Dabei wird einerseits eine Umsetzung mit den Frameworks Angular (Client) und ASP.NET (Server) geprüft und andererseits eine Umsetzung mit den Frameworks React (Client) und Node.js (Server).
+    \item Die Implementierungen werden in der Arbeit beschrieben und als öffentliche Repositories auf Github veröffentlicht.
+    \item Als optionaler Schritt werden Pakete über npm (Angular, React und Node.js) bzw. NuGet (ASP.NET) veröffentlicht.
+    \item Abschließend werden offene Fragen und weitere Ansätze für zukünftige Arbeiten herausgearbeitet und in einem eigenen Abschnitt dokumentiert.
+\end{enumerate}
+
+Durch den oben beschriebenen Vergleich mit vorhandenen Lösungen und die Umsetzbarkeit des vorgeschlagenen Ansatzes kann validiert werden, inwieweit das entwickelte Konzept in der Praxis umsetzbar ist.
+
+\section{Vorläufige Gliederung}
+
+\begin{enumerate}
+
+\item Einleitung
+\begin{enumerate}[label*=\arabic*]
+\item Hintergrund und Motivation
+\item Zielsetzung
+\item Struktur der Arbeit
+\end{enumerate}
+
+\item Grundlagen
+\begin{enumerate}[label*=\arabic*]
+\item Komponentenbasierte Webeentwicklung
+\item Zentraler Redux-Datenstore
+\item WebSocket-Kommunikation
+\item Zentraler Redux-Datenstore mit WebSocket-Kommunikation
+\end{enumerate}
+
+\item Stand der Technik
+\begin{enumerate}[label*=\arabic*]
+\item Verwandte Arbeiten
+\item Analyse der verwandten Arbeiten
+\end{enumerate}
+
+\item Lösungsidee
+\begin{enumerate}[label*=\arabic*]
+\item Generische Konzeption und Spezifikation
+\item Vergleich mit herkömmlichem Modell
+\item Vergleich mit verwandten Arbeiten
+\end{enumerate}
+
+\item Implementierung und Tests
+\begin{enumerate}[label*=\arabic*]
+\item Angular und ASP.NET
+\item React und Node.js
+\item Optional: npm und NuGet
+\end{enumerate}
+
+\item Fazit
+\begin{enumerate}[label*=\arabic*]
+\item Zusammenfassung
+\item Validierung der Lösung
+\item Potenzielle Verbesserungen des Konzepts
+\end{enumerate}
+\end{enumerate}
+
+
+\begin{enumerate}[label*=\Alph*]
+\item Anhang
+\item Eigenständigkeitserklärung 
+\end{enumerate}
+
+
+\section{Vorläufiger Zeitplan}
+
+Geplant ist, die Arbeit im Zeitraum vom 15. Oktober 2023 bis zum 15. April 2024 zu verfassen. Dies umfasst die Kalenderwochen 38 bis 52 im Jahr 2023 bzw. 1 bis 15 im Jahr 2024. Aus Gründen der Übersichtlichkeit erfolgt die Zeitplanung in Kalenderwochen (KW).
+
+\begin{itemize}
+\item KW 38 bis KW 39: Grundstruktur aufbauen und Kapitel 1. Einleitung
+\item KW 39 bis KW 40: Kapitel 2. Grundlagen
+\item KW 41 bis KW 42: Kapitel 4.1 Generische Konzeption und Spezifikation
+\item KW 43: Kapitel 4.2 Vergleich mit herkömmlichem Modell
+\item KW 44: Literaturrecherche für Kapitel 3
+\item KW 45: Kapitel 3.1 Verwandte Arbeiten
+\item KW 46: Kapitel 3.2 Analyse der verwandten Arbeiten
+\item KW 47 bis KW 48: Kapitel 4.1 Generische Konzeption und Spezifikation anhand der Ergebnisse aus Kapitel 3 verfeinern
+\item KW 49 bis KW 50: Kapitel 4.3 Vergleich mit verwandten Arbeiten
+\item KW 50: Abgabe einer Zwischenversion der Arbeit
+\item KW 50 bis KW 4: Implementierungen und Tests durchführen
+\item KW 5: Kapitel 5.1 Angular und ASP.NET
+\item KW 6: Kapitel 5.2 React und Node.js
+\item KW 7: Kapitel 5.3 npm und NuGet (optional)
+\item KW 8 bis KW 9: Kapitel 6 Fazit und Abstract
+\item KW 9: Abgabe einer ersten vollständigen Version der Arbeit
+\item KW 10 bis KW 11: Erstellung einer PPT-Präsentation
+\item KW 12 bis KW 13: Überarbeitung der Arbeit
+\item KW 14 bis KW 15: Reserve
+\item KW 15: Abgabe der Arbeit
+\end{itemize}
+
+\printbibliography
+
+\end{document}
