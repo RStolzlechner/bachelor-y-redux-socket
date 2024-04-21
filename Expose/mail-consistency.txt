@@ -1,0 +1,33 @@
+Sehr geehrte Frau Dr. Ma,
+
+wenn man einen Redux-Store konsequent einsetzt, kann gewährleistet werden, dass die Daten in einer konsistenten Art auf allen eingesetzten Komponenten angezeigt werden. Diese Konsistenz gilt für genau einen Client. Der gesamte Zustand der Anwendung ist in einem einzigen unveränderlichen (immutable) JavaScript-Objekt abgebildet, und Änderungen können ausschließlich durch das Auslösen (dispatchen) einer Action vorgenommen werden.
+
+Jeder beteiligte Client verfügt somit über seine eigene "Single Source of Truth" (einzige Wahrheitsquelle). Es ist jedoch wichtig zu beachten, dass die tatsächliche Wahrheit in der von einem Server verwalteten Datenbank liegt. Hier können bei Lese-Schreib- oder Schreib-Schreib-Konflikten sowie bei kurzzeitigen Unterbrechungen der WebSocket-Verbindung Inkonsistenzen zwischen den einzelnen Stores der Clients auftreten. Das oben erwähnte JavaScript-Objekt existiert im RAM des Webbrowsers, was bedeutet, dass beim Neuladen der Anwendung die Daten erneut vom Server abgerufen werden und der Zustand wieder dem Zustand der Datenbank entspricht. Darüber hinaus werden die Daten aktualisiert, wenn eine neue Erfolgsmeldung eines Aktualisierungsvorgangs eintrifft. In diesem Kontext kann man von "eventual consistency" sprechen.
+
+Für viele Anwendungsfälle ist diese "eventual consistency" durchaus ausreichend. Es gibt jedoch Szenarien, in denen eine hohe Konsistenz zwischen den einzelnen Clients bzw. Client-Stores erforderlich ist. Bei "yoshie.io" war dies beispielsweise beim kollaborativen Schreiben in einem Editor notwendig. Dabei wurde ein Algorithmus von Marijn Haverbeke verwendet (siehe auch https://marijnhaverbeke.nl/blog/collaborative-editing.html), der in YReduxSocket implementiert wurde. Vereinfacht funktioniert der Algorithmus folgendermaßen:
+
+    - Am Server werden die Actions (beispielsweise über eine Redis-Datenbank) an zentraler Stelle gesammelt.
+    - Alle Actions desselben Typs haben eine Versionsnummer.
+    - Auch die Clients haben die zuletzt gesendete Versionsnummer gespeichert.
+    - Wenn ein Client eine neue Action auslösen möchte, sendet er sie zusammen mit seiner Versionsnummer an den Server.
+
+FALL A: Die Versionsnummer des Clients stimmt mit der des Servers überein:
+
+    - Wenn die Versionsnummer am Server mit der des Clients übereinstimmt, wird die Action ausgeführt (Datenbankanpassung) und im Redis-Cache gespeichert.
+    - Darüber hinaus werden alle anderen Clients, die sich für diese Action angemeldet haben, über eine "NewAction"-Meldung benachrichtigt.
+    - Anschließend erhöhen alle Clients ihre Versionsnummer.
+
+FALL B: Die Versionsnummer des Clients stimmt nicht mit der des Servers überein:
+
+    - In diesem Fall verwirft der Server einfach die empfangene Action.
+    - Da die Versionsnummern nicht übereinstimmen, wird eine "NewAction"-Meldung an den Client gesendet.
+    - Wenn eine "NewAction"-Meldung eintrifft, holt sich der Client alle Actions, die größer sind als seine eigene Versionsnummer, vom Server und wendet sie auf seinem Redux-Store an.
+    - Danach sendet er seinen Änderungswunsch (Action) erneut an den Server.
+
+Es ist erwähnenswert, dass das Konsistenzproblem nicht nur bei YReduxSocket, sondern auch im herkömmlichen Modell auftritt. Wenn Sie möchten, kann ich das oben kurz beschriebene Konsistenzverhalten in die Arbeit aufnehmen. Dafür würde ich aber gerne den Vergleichsteil der Arbeit (Kapitel 3 und 4.3) etwas reduzieren. Was denken Sie, soll ich das beschriebene Konsistenzverhalten noch ins Exposé bzw. in die PPT aufnehmen oder reicht diese E-Mail aus?
+
+Danke im Voraus.
+
+Mit freundlichen Grüßen,
+
+Ricardo Stolzlechner
